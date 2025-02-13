@@ -1,20 +1,13 @@
-import Image from 'next/image';
-import StatusLabel, { Status } from './components/status-label';
-import { headers } from 'next/headers';
-import AddCompanyButton from '../app/components/add-company-button';
-import ServerComponent from './components/server-component';
-import ClientComponent from './components/client-component';
-import ServerComponentCopy from './components/server-component-copy';
-import MagicButton from './components/magic-button';
+import AddCompanyButton from '@/app/components/add-company-button';
+import Header from './components/header';
+import Sidebar from './components/sidebar';
 
 export default function Home() {
-  console.log(headers());
-  
   return (
-      <main >
-      <h1 className="text-xl">Da bliat sluchilos {new Date().toTimeString()}</h1>
+    <main>
+      <Header>Home page</Header>
+      <Sidebar></Sidebar>
       <AddCompanyButton />
-      </main>
-
+    </main>
   );
 }
